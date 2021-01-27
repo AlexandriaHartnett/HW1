@@ -13,7 +13,20 @@ int main() {
   std::cout << "Quantity: ";
   std::cin >> quantity;
 
+  double markup;
+  std::cout << "Markup: ";
+  std::cin >> markup;
+
   int totalPrice = price * quantity;
-  std::cout << "Total Price: " << totalPrice << std::endl;
+  double retailPrice = totalPrice * (1 + markup);
+  double profit = retailPrice - totalPrice;
+  
+  std::cout << name<< ", "
+	    << price << ", "
+	    << quantity << ", "
+	    << price << ", "
+	    << totalPrice << ", "
+	    << retailPrice << ", "
+	    << profit << std::endl;
   return 0;
 }
